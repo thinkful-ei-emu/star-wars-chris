@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from './component/SearchBar';
-import Main from './component/Main';
+import Results from './component/Results';
 import SearchError from './component/SearchError';
 import ResultsError from './component/ResultsError';
 
@@ -23,7 +23,7 @@ class App extends React.Component {
         <SearchBar addResults={(e) => this.addResults(e)} />
         </SearchError>
         <ResultsError>
-        <Main results={this.state.results} />
+        <Results results={this.state.results} />
         </ResultsError>
       </main>
     );

@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 
 //make the App component available
-import App from './App';
+import Results from './Results';
 
 describe('SearchBar component', () => {
 //this is the test case
@@ -15,7 +15,7 @@ describe('SearchBar component', () => {
         const div = document.createElement('div');
 
         //render the component, this is the actual test, if something is wrong it will fail here
-        ReactDOM.render(<App />, div);
+        ReactDOM.render(<Results results={[{name:'Your'},{name:'Results'},{name:'Here'}]}  />, div);
 
         //clean up code
         ReactDOM.unmountComponentAtNode(div);
@@ -23,7 +23,7 @@ describe('SearchBar component', () => {
 
     it('renders the UI as expected', () => {
         const tree = renderer
-        .create(<App />)
+        .create(<Results results={[{name:'Your'},{name:'Results'},{name:'Here'}]}  />)
         .toJSON();
         expect(tree).toMatchSnapshot();  
     });

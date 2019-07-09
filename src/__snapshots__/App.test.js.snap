@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar component renders the UI as expected 1`] = `
+<main
+  className="App"
+>
+  <header>
+    <h1>
+      Star Wars Search!
+    </h1>
+  </header>
+  <div>
+    <form
+      className="charsearch-form"
+      onSubmit={[Function]}
+    >
+      <div>
+        <label
+          htmlFor="category"
+        >
+          category
+        </label>
+        <select
+          name="category"
+          onChange={[Function]}
+          valule="films/"
+        >
+          <option
+            value="films/"
+          >
+            Films
+          </option>
+          <option
+            value="people/"
+          >
+            People
+          </option>
+          <option
+            value="planets/"
+          >
+            Planets
+          </option>
+          <option
+            value="species/"
+          >
+            Species
+          </option>
+          <option
+            value="starships/"
+          >
+            Starships
+          </option>
+          <option
+            value="vehicles/"
+          >
+            Vehicles
+          </option>
+        </select>
+        <label
+          htmlFor="namesearch"
+        >
+          Search
+        </label>
+        <input
+          name="namesearch"
+          onChange={[Function]}
+          placehoder="Skywalker"
+          type="text"
+          value=""
+        />
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
+    </form>
+    <div />
+  </div>
+  <div>
+    <h2>
+      Results:
+    </h2>
+    <ul>
+      <li>
+        Your
+      </li>
+      <li>
+        Results
+      </li>
+      <li>
+        Here
+      </li>
+    </ul>
+  </div>
+</main>
+`;

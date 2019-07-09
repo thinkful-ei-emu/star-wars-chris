@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Main(props) {
+function Results(props) {
     const finalResult = props.results.map((result,index) => <li key={index}>{result[Object.keys(result)[0]]}</li>)
     return (
         <div>
@@ -12,4 +12,4 @@ function Main(props) {
     )
 }
 
-export default Main;
+export default Results;
