@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SearchBar from './component/SearchBar';
+import Main from './component/Main';
+import SearchError from './component/SearchError';
+import ResultsError from './component/ResultsError';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    results: [{name:'Your'},{name:'Results'},{name:'Here'}]
+  }
+
+  addResults = results => {
+    this.setState({results})
+  }
+
+  render(){
+    return (
+      <main className='App'>
+        <header>
+          <h1>Star Wars Search!</h1>
+        </header>
+        <SearchError>
+        <SearchBar addResults={(e) => this.addResults(e)} />
+        </SearchError>
+        <ResultsError>
+        <Main results={this.state.results} />
+        </ResultsError>
+      </main>
+    );
+  }
 }
 
 export default App;
