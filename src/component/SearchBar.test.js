@@ -9,7 +9,7 @@ import Adapter from 'enzyme-adapter-react-16';
 //make the ReactDOM available, necessary for rendering the component
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 
 //make the App component available
 import SearchBar from './SearchBar';
@@ -36,11 +36,4 @@ describe('SearchBar component', () => {
         expect(tree).toMatchSnapshot();  
     });
 
-    it('calls addResults function when form is submitted', () => {
-        const addResultsFn = jest.fn()
-        const wrapper = mount(<SearchBar addResults={addResultsFn} />);
-
-        wrapper.find('form').simulate('submit')
-        expect(addResultsFn).toHaveBeenCalledTimes(1)
-    })
 });
